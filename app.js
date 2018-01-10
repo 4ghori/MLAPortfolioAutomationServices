@@ -20,6 +20,9 @@ mongoose.connect('mongodb://127.0.0.1:27017/MLAPortfolioAutomationDB', { useMong
 var index = require('./routes/index');
 var users = require('./routes/users');
 
+
+var api = require('./routes/api.route');
+
 var app = express();
 
 // view engine setup
@@ -43,7 +46,8 @@ app.use(function(req, res, next) {
 });
 
 app.use('/', index);
-app.use('/users', users);
+/*app.use('/users', users);*/
+app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
