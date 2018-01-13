@@ -9,7 +9,7 @@ var bluebird = require('bluebird');
 
 mongoose.Promise = bluebird
 
-mongoose.connect('mongodb://139.59.88.24:27017/MLAPortfolioAutomationDB', { useMongoClient: true })
+mongoose.connect('mongodb://10.139.136.58:27017/MLAPortfolioAutomationDB', { useMongoClient: true })
     .then(function () {
         console.log('Succesfully Connected to the Mongodb Database  at URL : mongodb://127.0.0.1:27017/MLAPortfolioAutomationDB');
     })
