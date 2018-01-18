@@ -21,6 +21,7 @@ exports.authenticateUser = async function(user){
             return {
                 authenticated: true,
                 username: username,
+                role: oldUser[0].role,
                 message: 'Logged in successfully'
             }
         } else {
