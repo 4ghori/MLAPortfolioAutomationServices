@@ -1,4 +1,4 @@
-var LoginService = require('../services/login.services');
+var LoginService = require('../services/login.service');
 var _this = this;
 
 exports.authenticateUser = async function(req, res, next){
