@@ -10,9 +10,6 @@ exports.authenticateUser = async function(req, res, next){
         return res.status(400).json({status: 400., message: "Password must be present"})
     }
 
-    var username = req.body.username,
-        password = req.body.password;
-
     var user = {
         username: req.body.username ? req.body.username : null,
         password: req.body.password ? req.body.password : null
