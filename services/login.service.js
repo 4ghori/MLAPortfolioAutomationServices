@@ -25,7 +25,7 @@ exports.authenticateUser = async function(user){
             }
         } else {
             if (oldUser.username !== username) {
-                console.log(oldUser.username + ' ' username);
+                console.log(oldUser.username + ' ' + username);
                 return {
                     authenticated: false,
                     username: username,
