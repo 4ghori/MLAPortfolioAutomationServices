@@ -20,7 +20,11 @@ exports.authenticateUser = async function(req, res, next){
 
     try{
         var authenticatedUser = await LoginService.authenticateUser(user);
-        return res.status(200).json({status: 200, data: authenticatedUser, message: "Succesfully authenticated User"})
+        if (authenticatedUser.authenticated) {
+            return res.status(200).json({status: 200, data: authenticatedUser, message: "Succesfully authenticated User"})
+        } else {
+            return res.status(200).json({status: 200, data: authenticatedUser, message: "Unsuccessful Authentication"})
+        }
     }catch(e){
         return res.status(400).json({status: 400., message: e.message})
     }
