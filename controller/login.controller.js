@@ -2,6 +2,8 @@ var LoginService = require('../services/login.service');
 var _this = this;
 
 exports.authenticateUser = async function(req, res, next){
+    console.log(req);
+
     if(!req.body.username){
         return res.status(400).json({status: 400., message: "Username must be present"})
     }
