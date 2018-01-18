@@ -12,8 +12,8 @@ exports.authenticateUser = async function(user){
         throw Error("Error occured while Finding the user")
     }
 
-    if (!!oldUser) {
-        if (oldUser.username === username && oldUser.password === password) {
+    if (!!oldUser && oldUser.length === 0) {
+        if (oldUser[0].username === username && oldUser[0].password === password) {
             loginTimeStamp = moment().format('MMMM Do YYYY, h:mm:ss a');
 
             console.log(loginTimeStamp);
@@ -24,8 +24,7 @@ exports.authenticateUser = async function(user){
                 message: 'Logged in successfully'
             }
         } else {
-            if (oldUser.username !== username) {
-                console.log(JSON.stringify(oldUser) + ' ' + username);
+            if (oldUser[0].username !== username) {
                 return {
                     authenticated: false,
                     username: username,
@@ -33,7 +32,7 @@ exports.authenticateUser = async function(user){
                 }
             }
 
-            if (oldUser.password !== password) {
+            if (oldUser[0].password !== password) {
                 return {
                     authenticated: false,
                     username: username,
