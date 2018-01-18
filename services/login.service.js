@@ -12,9 +12,7 @@ exports.authenticateUser = async function(user){
         throw Error("Error occured while Finding the user")
     }
 
-    console.log(JSON.stringify(oldUser));
-
-    if (!!oldUser && oldUser.length === 0) {
+    if (!!oldUser && oldUser.length !== 0) {
         if (oldUser[0].username === username && oldUser[0].password === password) {
             loginTimeStamp = moment().format('MMMM Do YYYY, h:mm:ss a');
 
