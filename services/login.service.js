@@ -7,7 +7,7 @@ exports.authenticateUser = async function(user){
         loginTimeStamp;
 
     try{
-        var oldUser = await User.findById(username);
+        var oldUser = await User.find({username: username});
     }catch(e){
         throw Error("Error occured while Finding the user")
     }
