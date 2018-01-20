@@ -31,6 +31,8 @@ exports.authenticateUser = async function(user){
 
             payload.token = token;
 
+            console.log(token);
+
             console.log(loginTimeStamp);
 
             return payload;

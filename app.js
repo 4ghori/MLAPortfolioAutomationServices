@@ -10,7 +10,7 @@ var bluebird        = require('bluebird');
 var jwt             = require('jsonwebtoken');
 var config          = require('./config');
 
-mongoose.Promise = bluebird
+mongoose.Promise = bluebird;
 
 mongoose.connect('mongodb://139.59.88.24:27017/user', { useMongoClient: true })
     .then(function () {
