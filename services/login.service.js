@@ -26,7 +26,7 @@ exports.authenticateUser = async function(user){
             };
 
             var token = jwt.sign(payload, config.appConfig.secret, {
-               expires: 15
+                expiresInMinutes: 15
             });
 
             payload.token = token;
