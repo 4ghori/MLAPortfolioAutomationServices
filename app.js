@@ -12,6 +12,8 @@ var config          = require('./config');
 
 mongoose.Promise = bluebird;
 
+console.log('hello');
+
 mongoose.connect('mongodb://139.59.88.24:27017/user', { useMongoClient: true })
     .then(function () {
         console.log('Succesfully Connected to the Mongodb Database  at URL : mongodb://127.0.0.1:27017/MLAPortfolioAutomationDB');
