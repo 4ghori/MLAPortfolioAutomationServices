@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e713fa2-fbbd-4219-bc21-52605d43595e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/routes/apis/login.routes.js" afterPath="$PROJECT_DIR$/routes/apis/login.routes.js" />
+      <change beforePath="$PROJECT_DIR$/routes/apis/user.routes.js" afterPath="$PROJECT_DIR$/routes/apis/user.routes.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,7 +23,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.routes.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.routes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/apis/login.routes.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
@@ -33,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.routes.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="user.routes.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/apis/user.routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+            <state relative-caret-position="30">
+              <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -137,9 +137,9 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/middleware/api.middleware.js" />
-        <option value="$PROJECT_DIR$/routes/apis/user.routes.js" />
         <option value="$PROJECT_DIR$/routes/api.route.js" />
         <option value="$PROJECT_DIR$/routes/apis/login.routes.js" />
+        <option value="$PROJECT_DIR$/routes/apis/user.routes.js" />
       </list>
     </option>
   </component>
@@ -342,7 +342,7 @@
       <workItem from="1516452113496" duration="1677000" />
       <workItem from="1516453947425" duration="1496000" />
       <workItem from="1516455784593" duration="1670000" />
-      <workItem from="1516457594079" duration="502000" />
+      <workItem from="1516457594079" duration="613000" />
     </task>
     <task id="LOCAL-00001" summary="IP for remote connection">
       <created>1515852018043</created>
@@ -418,7 +418,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28308000" />
+    <option name="totallyTimeSpent" value="28419000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="986" extended-state="0" />
@@ -826,14 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/apis/user.routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/api.route.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -846,6 +838,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/apis/user.routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
           <folding />
         </state>
       </provider>
