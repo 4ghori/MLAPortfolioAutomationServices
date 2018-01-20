@@ -1,6 +1,7 @@
 var User = require('../models/user.model');
 var moment = require('moment');
-var jwt = require('jsonwebtoken')
+var jwt = require('jsonwebtoken');
+var config = require('../config');
 
 exports.authenticateUser = async function(user){
     var username = user.username,
