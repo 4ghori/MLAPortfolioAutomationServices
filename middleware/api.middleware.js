@@ -1,3 +1,4 @@
+var express = require('express');
 var apiRoutes = express.Router();
 var config = require('../config');
 
