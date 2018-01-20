@@ -15,15 +15,23 @@ exports.authenticateUser = async function(user){
     if (!!oldUser && oldUser.length !== 0) {
         if (oldUser[0].username === username && oldUser[0].password === password) {
             loginTimeStamp = moment().format('MMMM Do YYYY, h:mm:ss a');
-
-            console.log(loginTimeStamp);
-
-            return {
+            var payload = {
                 authenticated: true,
                 username: username,
                 role: oldUser[0].role,
-                message: 'Logged in successfully'
-            }
+                message: 'Logged in successfully',
+                token: ''
+            };
+
+            var token = jwt.sign(payload, app.get('secret'), {
+               expires: 15
+            });
+
+            payload.token = token;
+
+            console.log(loginTimeStamp);
+
+            return payload;
         } else {
             if (oldUser[0].username !== username) {
                 return {
