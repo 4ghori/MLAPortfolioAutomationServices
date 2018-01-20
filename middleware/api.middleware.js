@@ -1,11 +1,7 @@
-var express = require('express');
-var apiRoutes = express.Router();
 var config = require('../config');
 
-exports.registerAPIMiddleWare = function () {
-    console.log('register API');
-
-    apiRoutes.use(function (req, res, next) {
+exports.registerAPIMiddleWare = function (router) {
+    router.use(function (req, res, next) {
         // check header or url parameters or post parameters for token
         var token = req.body.token || req.query.token || req.headers['x-access-token'];
 
@@ -28,4 +24,6 @@ exports.registerAPIMiddleWare = function () {
             })
         }
     });
+
+    return router;
 };
