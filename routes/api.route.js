@@ -5,8 +5,6 @@ var router = express.Router();
 var user = require('./apis/user.routes');
 var login = require('./apis/login.routes');
 
-configureMiddleWare.registerAPIMiddleWare();
-
 router.use('/user', user);
 router.use('/login', login);
 
