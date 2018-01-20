@@ -24,7 +24,7 @@ exports.authenticateUser = async function(user){
                 token: ''
             };
 
-            var token = jwt.sign(payload, app.get('secret'), {
+            var token = jwt.sign(payload, config.secret, {
                expires: 15
             });
 
