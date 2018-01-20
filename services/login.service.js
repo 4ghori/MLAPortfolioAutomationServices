@@ -26,7 +26,8 @@ exports.authenticateUser = async function(user){
             };
 
             var token = jwt.sign(payload, config.appConfig.secret, {
-                expiresIn: 15
+                algorithm: 'HMAC SHA256',
+                expiresIn: '1h'
             });
 
             payload.token = token;
