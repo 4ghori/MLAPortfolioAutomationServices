@@ -26,7 +26,6 @@ exports.authenticateUser = async function(user){
             };
 
             var token = jwt.sign(payload, config.appConfig.secret, {
-                algorithm: 'RS256',
                 expiresIn: '1h'
             });
 
