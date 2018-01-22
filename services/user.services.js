@@ -25,7 +25,9 @@ exports.createUser = async function(user){
         password: user.password,
         role: user.role,
         email: user.email,
-        mobile: user.mobile
+        mobile: user.mobile,
+        isActive: false,
+        lastLogin: new Date()
     });
 
     try{

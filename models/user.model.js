@@ -9,6 +9,8 @@ var UserSchema = new mongoose.Schema({
     role: String,
     email: String,
     mobile: String
+    isActive: Boolean,
+    lastLogin: Date
 });
 
 UserSchema.plugin(mongoosePaginate);

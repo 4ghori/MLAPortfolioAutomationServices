@@ -21,6 +21,8 @@ exports.authenticateUser = async function(user){
                 authenticated: true,
                 username: username,
                 role: oldUser[0].role,
+                isActive: oldUser[0].isActive,
+                lastLogin: oldUser[0].lastLogin,
                 message: 'Logged in successfully',
                 token: ''
             };
@@ -31,8 +33,7 @@ exports.authenticateUser = async function(user){
 
             payload.token = token;
 
-            console.log(token);
-
+            // Save the last login time of the user
             console.log(loginTimeStamp);
 
             return payload;
